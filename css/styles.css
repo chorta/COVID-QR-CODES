@@ -1,0 +1,10 @@
+/* Page Dimensions */
+
+#page {
+  background-image: url('../img/qr-35-35.jpg');
+  border: 1px solid #333;
+  background-size: 741px, 1040px;
+  width: 741px; /* width: 7in; */
+  height: 1040px; /* or height: 9.5in; */
+  margin: 0 auto;
+}
