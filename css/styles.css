@@ -1,26 +1,51 @@
-body { margin: 0;}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+body {
+  width: 8.5in;
+  height: 11in;
+  margin: 0;
+  padding: 0;
+}
 
 /* Page Dimensions */
 
 #page {
-  background-image: url('../img/qr-35-35.jpg');
-  border: 1px solid #333;
-  background-size: 741px, 1040px;
-  width: 711px; /* width: 7in; */
-  height: 978px; /* or height: 9.5in; */
-  margin: 0 auto;
-  padding: 32px 15px;
   page-break-after: always;
+  position: relative;
+  width: 8.5in;
+  height: 11in
+}
+
+.page-content {
+  background-image: url('../img/qr-25-25.jpg');
+  background-size: 8.5in 11in;
+  position: absolute;
+  width: 8.125in;
+  height: 10.625in;
+  left: 0;
+  top: 0;
 }
 
 .qr-container {
-    background: #22b74b61;
-    width: 17.3%;
-    height: 12.2%;
-    margin-right: 3px;
-    margin-bottom: 6px;
-    float: left;
-    padding: 8px;
+  /*background: #22b74b61;*/
+  width: 1.5in;
+  height: 1.5in;
+  margin: .58in 0.25in 0 0;
+  float: left;
+  padding: 8px;
+  overflow: hidden;
+  display: block;
+}
+
+.qr-container:nth-child(4n) {margin-right: 0;}
+
+.qr-container:nth-child(1n) {
+    margin-left: .5in;
+    margin-right: 0;
 }
 
 .qr-container img {
@@ -29,14 +54,22 @@ body { margin: 0;}
 
 @media print {
 
-  .qr-container {
-      background: green !important;
-      width: 17.3%;
-      height: 12.2%;
-      margin-right: 3px;
-      margin-bottom: 6px;
-      float: left;
-      padding: 8px;
+
+  #page {
+    page-break-after: always;
+    position: relative;
+    width: 8.5in;
+    height: 11in
+  }
+
+  .page-content {
+    background-image: url('../img/qr-25-25.jpg');
+    background-size: 8.5in 11in;
+    position: absolute;
+    width: 8.125in;
+    height: 10.625in;
+    left: 0;
+    top: 0;
   }
 
   .qr-container img {
