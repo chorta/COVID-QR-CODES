@@ -76,4 +76,9 @@ body {
     max-width: 100%;
   }
 
+  @page {
+  size: auto;
+  margin: 0;
+  }  
+
 }
